@@ -1,3 +1,24 @@
+:root {
+  --main-bg-color: #f3f0d7;
+  --brown: #5e454b;
+  --creamy: #f7d59c;
+  --creamy_hover: #f8e4c1;
+  --green-blue: #cee5d0;
+}
+body {
+  background-color: var(--main-bg-color);
+}
+.navbar {
+  background-color: var(--brown);
+  color: var(--creamy);
+}
+.navbar a {
+  color: var(--creamy);
+}
+.navbar a:hover {
+  color: var(--creamy_hover);
+  transform: scale(1.2);
+}
 .tutorial {
   width: 600px;
   text-align: center;

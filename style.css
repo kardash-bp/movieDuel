@@ -19,6 +19,12 @@ body {
   color: var(--creamy_hover);
   transform: scale(1.2);
 }
+.search {
+  margin-top: 80px;
+}
+.search .form-control {
+  color: var(--brown);
+}
 .tutorial {
   width: 600px;
   text-align: center;

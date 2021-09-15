@@ -22,8 +22,12 @@ body {
 .search {
   margin-top: 80px;
 }
-.search .form-control {
+.search .form-control,
+.search .list-group {
   color: var(--brown);
+}
+.list-group-item img {
+  width: 60px;
 }
 .tutorial {
   width: 600px;

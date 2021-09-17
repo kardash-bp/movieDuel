@@ -1,4 +1,4 @@
-import { optionList, singleMovieTemplate } from './templets.js'
+import { optionList, singleMovieTemplate } from './templates.js'
 import { api } from './config.js'
 import { debounce } from './utils.js'
 

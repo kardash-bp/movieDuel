@@ -1,5 +1,5 @@
 import { MovieBox } from './autocomplete.js'
-import { optionList, singleMovieTemplate } from './templets.js'
+import { optionList, singleMovieTemplate } from './templates.js'
 
 const root = document.querySelector('.search')
 //boxName is className

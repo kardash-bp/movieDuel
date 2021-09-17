@@ -3,12 +3,13 @@ export const debounce =
   (...args) =>
     clearTimeout(id, (id = setTimeout(() => cb(...args), time)))
 
-const debounceSimple = (callback, time = 1000, id) => {
+export function debounceSimple(callback, time = 1000, id) {
   if (id) {
     clearTimeout(id)
   }
-  return (...args) =>
-    setTimeout(() => {
+  return function (...args) {
+    setTimeout(function () {
       callback(...args)
     }, time)
+  }
 }

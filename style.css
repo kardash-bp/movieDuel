@@ -3,7 +3,7 @@
   --brown: #5e454b;
   --creamy: #f7d59c;
   --creamy_hover: #f8e4c1;
-  --green-blue: #cee5d0;
+  --green-blue: #e9f5ea;
 }
 body {
   background-color: var(--main-bg-color);
@@ -26,8 +26,24 @@ body {
 .search .list-group {
   color: var(--brown);
 }
+.list-group-item {
+  cursor: pointer;
+}
 .list-group-item img {
   width: 60px;
+}
+.search .card-header {
+  background-color: transparent;
+  border-bottom: transparent;
+}
+.search .card {
+  margin-top: 1rem;
+}
+.search img {
+  height: auto;
+}
+.search .card {
+  background-color: var(--green-blue);
 }
 .tutorial {
   width: 600px;

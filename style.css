@@ -7,6 +7,7 @@
 }
 body {
   background-color: var(--main-bg-color);
+  color: var(--brown);
 }
 .navbar {
   background-color: var(--brown);
@@ -21,6 +22,10 @@ body {
 }
 .search {
   margin-top: 80px;
+  text-align: center;
+}
+.search h1 {
+  color: var(--brown);
 }
 .search .form-control,
 .search .list-group {
@@ -44,11 +49,6 @@ body {
 }
 .search .card {
   background-color: var(--green-blue);
-}
-.tutorial {
-  width: 600px;
-  text-align: center;
-  margin: auto;
 }
 
 figure.image {

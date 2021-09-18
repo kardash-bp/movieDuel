@@ -19,6 +19,13 @@ export const optionList = (data) => {
 }
 
 export const singleMovieTemplate = (movie) => {
+  const dataBox = movie.BoxOffice?.match(/\d+/g)?.join()
+  const rating = movie.imdbRating
+  const metascore = movie.Metascore
+  const totalAwards = movie.Awards.match(/\d+/g)?.reduce(
+    (acc, cur) => acc + parseInt(cur),
+    0
+  )
   const div = document.createElement('div')
   div.className = 'card'
   div.innerHTML = `
@@ -33,18 +40,18 @@ export const singleMovieTemplate = (movie) => {
   <div class="card-body">
 
   <ul class="list-group">
-    <li class="list-group-item list-group-item-success d-flex justify-content-between">Awards: <span>
+    <li data-value='${totalAwards}' class="list-group-item  d-flex justify-content-between">Awards: <span>
     ${movie.Awards[0] === 'W' ? movie.Awards.slice(3) : movie.Awards}
     </span></li>
-    <li class="list-group-item d-flex justify-content-between">Box Office: <span >${
-      movie.BoxOffice
-    }</span></li>
-    <li class="list-group-item d-flex justify-content-between">IMDB Rating: <span>${
-      movie.imdbRating
-    }</span></li>
-    <li class="list-group-item d-flex justify-content-between">Metascore: <span>${
-      movie.Metascore
-    }</span></li>
+    <li data-value='${dataBox}' class="list-group-item d-flex justify-content-between">Box Office: <span >${
+    movie.BoxOffice
+  }</span></li>
+    <li data-value='${rating}' class="list-group-item d-flex justify-content-between">IMDB Rating: <span>${
+    movie.imdbRating
+  }</span></li>
+    <li data-value='${metascore}' class="list-group-item d-flex justify-content-between">Metascore: <span>${
+    movie.Metascore
+  }</span></li>
   </ul>
 
   </div>`
